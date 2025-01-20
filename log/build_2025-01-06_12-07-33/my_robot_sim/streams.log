@@ -1,0 +1,86 @@
+[0.020s] Invoking command in '/home/miriam/my_workspace/build/my_robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/miriam/my_workspace/src/my_robot_sim -DCMAKE_INSTALL_PREFIX=/home/miriam/my_workspace/install/my_robot_sim
+[0.109s] -- The C compiler identification is GNU 11.4.0
+[0.197s] -- The CXX compiler identification is GNU 11.4.0
+[0.209s] -- Detecting C compiler ABI info
+[0.324s] -- Detecting C compiler ABI info - done
+[0.334s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.334s] -- Detecting C compile features
+[0.334s] -- Detecting C compile features - done
+[0.338s] -- Detecting CXX compiler ABI info
+[0.469s] -- Detecting CXX compiler ABI info - done
+[0.478s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.479s] -- Detecting CXX compile features
+[0.479s] -- Detecting CXX compile features - done
+[0.482s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.683s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.800s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[0.801s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.897s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.899s] -- Added test 'lint_cmake' to check CMake code style
+[0.899s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.904s] -- Added test 'xmllint' to check XML markup files
+[0.905s] -- Configuring done
+[0.909s] -- Generating done
+[0.911s] -- Build files have been written to: /home/miriam/my_workspace/build/my_robot_sim
+[0.918s] Invoked command in '/home/miriam/my_workspace/build/my_robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/miriam/my_workspace/src/my_robot_sim -DCMAKE_INSTALL_PREFIX=/home/miriam/my_workspace/install/my_robot_sim
+[0.922s] Invoking command in '/home/miriam/my_workspace/build/my_robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/miriam/my_workspace/build/my_robot_sim -- -j16 -l16
+[0.981s] Invoked command in '/home/miriam/my_workspace/build/my_robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/miriam/my_workspace/build/my_robot_sim -- -j16 -l16
+[0.996s] Invoking command in '/home/miriam/my_workspace/build/my_robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/miriam/my_workspace/build/my_robot_sim
+[1.006s] -- Install configuration: ""
+[1.007s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/urdf
+[1.007s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/urdf/my_robot.urdf
+[1.007s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes
+[1.007s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/rsc_flipperv8.STL
+[1.007s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/body2.STL
+[1.020s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/cornice.STL
+[1.021s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/base.STL
+[1.024s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/piattello_button.STL
+[1.025s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/screen.STL
+[1.025s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/LCD.STL
+[1.026s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/assyv4v67.STL
+[1.046s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/body.STL
+[1.058s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/button.STL
+[1.061s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/meshes/back.STL
+[1.061s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/rviz
+[1.061s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/rviz/view_robot.rviz
+[1.062s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/rviz/view_robot2.rviz
+[1.062s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/rviz/view_robot3.rviz
+[1.062s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/launch
+[1.062s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/launch/display_robot.launch.py
+[1.062s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures
+[1.062s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/surprise.jpg
+[1.063s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/sadness2.jpg
+[1.063s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/anger2.jpg
+[1.063s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/sadness.jpg
+[1.063s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/surprise2.jpg
+[1.063s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/smile2.jpg
+[1.063s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/anger.jpg
+[1.064s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/joy2.jpg
+[1.064s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/resized_smile.png
+[1.064s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/jot.jpg
+[1.064s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/resized_smile2.jpg
+[1.065s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/smile.png
+[1.065s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/textures/sadness3.jpg
+[1.065s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/package.xml
+[1.066s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/lib/my_robot_sim/arm_controller.py
+[1.066s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/lib/my_robot_sim/video_publisher.py
+[1.066s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/lib/my_robot_sim/joy.py
+[1.066s] -- Up-to-date: /home/miriam/my_workspace/install/my_robot_sim/lib/my_robot_sim
+[1.066s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/lib/my_robot_sim/video_panel.py
+[1.066s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/plugin_description.xml
+[1.066s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/ament_index/resource_index/package_run_dependencies/my_robot_sim
+[1.067s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/ament_index/resource_index/parent_prefix_path/my_robot_sim
+[1.067s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/environment/ament_prefix_path.sh
+[1.067s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/environment/ament_prefix_path.dsv
+[1.067s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/environment/path.sh
+[1.067s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/environment/path.dsv
+[1.067s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/local_setup.bash
+[1.068s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/local_setup.sh
+[1.068s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/local_setup.zsh
+[1.068s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/local_setup.dsv
+[1.068s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/package.dsv
+[1.069s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/ament_index/resource_index/packages/my_robot_sim
+[1.069s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/cmake/my_robot_simConfig.cmake
+[1.069s] -- Installing: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/cmake/my_robot_simConfig-version.cmake
+[1.069s] -- Up-to-date: /home/miriam/my_workspace/install/my_robot_sim/share/my_robot_sim/package.xml
+[1.072s] Invoked command in '/home/miriam/my_workspace/build/my_robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/miriam/my_workspace/build/my_robot_sim

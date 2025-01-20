@@ -1,0 +1,8 @@
+Visualization Manager:
+  Displays:
+    - Class: rviz_default_plugins/RobotModel
+      Description: Robot model display
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix:
+

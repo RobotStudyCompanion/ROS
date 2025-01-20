@@ -1,0 +1,2 @@
+source;share/rviz_camera_stream/environment/ament_prefix_path.sh
+source;share/rviz_camera_stream/environment/path.sh

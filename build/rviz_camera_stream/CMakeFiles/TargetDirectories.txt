@@ -1,0 +1,11 @@
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/uninstall.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/rviz_camera_stream_uninstall.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/rviz_camera_stream.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/test.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/edit_cache.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/rebuild_cache.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/list_install_components.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/install.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/install/local.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/install/strip.dir
+/home/miriam/my_workspace/build/rviz_camera_stream/CMakeFiles/rviz_camera_stream_autogen.dir

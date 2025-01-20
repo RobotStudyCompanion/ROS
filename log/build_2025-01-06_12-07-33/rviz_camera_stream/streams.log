@@ -1,0 +1,121 @@
+[0.019s] Invoking command in '/home/miriam/my_workspace/build/rviz_camera_stream': /usr/bin/cmake /home/miriam/my_workspace/src/rviz_camera_stream -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/miriam/my_workspace/install/rviz_camera_stream
+[0.104s] -- The C compiler identification is GNU 11.4.0
+[0.193s] -- The CXX compiler identification is GNU 11.4.0
+[0.205s] -- Detecting C compiler ABI info
+[0.317s] -- Detecting C compiler ABI info - done
+[0.328s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.328s] -- Detecting C compile features
+[0.328s] -- Detecting C compile features - done
+[0.333s] -- Detecting CXX compiler ABI info
+[0.465s] -- Detecting CXX compiler ABI info - done
+[0.475s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.475s] -- Detecting CXX compile features
+[0.475s] -- Detecting CXX compile features - done
+[0.478s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.690s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.797s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.844s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.850s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.859s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.874s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.892s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.944s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.947s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.104s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.142s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.201s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.210s] -- Looking for pthread.h
+[1.319s] -- Looking for pthread.h - found
+[1.320s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.431s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.432s] -- Found Threads: TRUE  
+[1.492s] -- Found image_transport: 3.1.10 (/opt/ros/humble/share/image_transport/cmake)
+[1.571s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[1.583s] -- Found rviz_common: 11.2.14 (/opt/ros/humble/share/rviz_common/cmake)
+[1.599s] -- Setting assimp_DIR to: '/opt/ros/humble/share/rviz_assimp_vendor/cmake/../../../opt/rviz_assimp_vendor/lib/cmake/assimp-4.1'
+[1.606s] -- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[1.608s] -- Found OGRE
+[1.608s] --   static     : OFF
+[1.608s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[1.608s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[1.608s] --   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media
+[1.608s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[1.609s] -- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib
+[1.609s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[1.609s] -- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE
+[1.609s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[1.609s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[1.609s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[1.609s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[1.610s] -- Could not find freeimage library
+[1.628s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[1.633s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[1.788s] -- Found X11: /usr/include   
+[1.788s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[1.898s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[1.898s] -- Looking for gethostbyname
+[2.004s] -- Looking for gethostbyname - found
+[2.004s] -- Looking for connect
+[2.108s] -- Looking for connect - found
+[2.108s] -- Looking for remove
+[2.211s] -- Looking for remove - found
+[2.212s] -- Looking for shmat
+[2.316s] -- Looking for shmat - found
+[2.317s] -- Looking for IceConnectionNumber in ICE
+[2.422s] -- Looking for IceConnectionNumber in ICE - found
+[2.596s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[2.621s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.621s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.744s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+[2.886s] -- Configuring done
+[3.122s] -- Generating done
+[3.124s] [33mCMake Warning:
+[3.124s]   Manually-specified variables were not used by the project:
+[3.124s] 
+[3.125s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[3.125s] 
+[3.125s] [0m
+[3.141s] -- Build files have been written to: /home/miriam/my_workspace/build/rviz_camera_stream
+[3.159s] Invoked command in '/home/miriam/my_workspace/build/rviz_camera_stream' returned '0': /usr/bin/cmake /home/miriam/my_workspace/src/rviz_camera_stream -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/miriam/my_workspace/install/rviz_camera_stream
+[3.163s] Invoking command in '/home/miriam/my_workspace/build/rviz_camera_stream': /usr/bin/cmake --build /home/miriam/my_workspace/build/rviz_camera_stream -- -j16 -l16
+[3.242s] [ 16%] [34m[1mAutomatic MOC and UIC for target rviz_camera_stream[0m
+[3.273s] AutoMoc warning
+[3.273s] ---------------
+[3.273s] "SRC:/src/camera_display.cpp"
+[3.273s] includes the moc file "camera_display.moc", but does not contain a Q_OBJECT, Q_GADGET, Q_NAMESPACE or Q_NAMESPACE_EXPORT macro.
+[3.273s] 
+[3.707s] AutoMoc: /home/miriam/my_workspace/src/rviz_camera_stream/src/camera_display.cpp:0: Note: No relevant classes found. No output generated.
+[3.726s] [ 16%] Built target rviz_camera_stream_autogen
+[3.747s] [ 33%] [34m[1mGenerating include/rviz_camera_stream/moc_camera_display.cpp[0m
+[3.791s] [ 50%] [32mBuilding CXX object CMakeFiles/rviz_camera_stream.dir/rviz_camera_stream_autogen/mocs_compilation.cpp.o[0m
+[3.792s] [ 83%] [32mBuilding CXX object CMakeFiles/rviz_camera_stream.dir/include/rviz_camera_stream/moc_camera_display.cpp.o[0m
+[3.792s] [ 83%] [32mBuilding CXX object CMakeFiles/rviz_camera_stream.dir/src/camera_display.cpp.o[0m
+[13.802s] [100%] [32m[1mLinking CXX shared library librviz_camera_stream.so[0m
+[18.053s] [100%] Built target rviz_camera_stream
+[18.069s] Invoked command in '/home/miriam/my_workspace/build/rviz_camera_stream' returned '0': /usr/bin/cmake --build /home/miriam/my_workspace/build/rviz_camera_stream -- -j16 -l16
+[18.072s] Invoking command in '/home/miriam/my_workspace/build/rviz_camera_stream': /usr/bin/cmake --install /home/miriam/my_workspace/build/rviz_camera_stream
+[18.078s] -- Install configuration: ""
+[18.078s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/lib/librviz_camera_stream.so
+[18.085s] -- Set runtime path of "/home/miriam/my_workspace/install/rviz_camera_stream/lib/librviz_camera_stream.so" to ""
+[18.085s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/plugin_description.xml
+[18.085s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/config
+[18.085s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/config/rviz_camera_stream.rviz
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/launch
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/launch/demo.launch
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/ament_index/resource_index/package_run_dependencies/rviz_camera_stream
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/ament_index/resource_index/parent_prefix_path/rviz_camera_stream
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/environment/ament_prefix_path.sh
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/environment/ament_prefix_path.dsv
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/environment/path.sh
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/environment/path.dsv
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/local_setup.bash
+[18.086s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/local_setup.sh
+[18.087s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/local_setup.zsh
+[18.087s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/local_setup.dsv
+[18.087s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/package.dsv
+[18.087s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/ament_index/resource_index/packages/rviz_camera_stream
+[18.087s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/cmake/ament_cmake_export_dependencies-extras.cmake
+[18.087s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/cmake/rviz_camera_streamConfig.cmake
+[18.087s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/cmake/rviz_camera_streamConfig-version.cmake
+[18.088s] -- Installing: /home/miriam/my_workspace/install/rviz_camera_stream/share/rviz_camera_stream/package.xml
+[18.090s] Invoked command in '/home/miriam/my_workspace/build/rviz_camera_stream' returned '0': /usr/bin/cmake --install /home/miriam/my_workspace/build/rviz_camera_stream
