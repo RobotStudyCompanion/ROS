@@ -57,14 +57,11 @@ class Anger(Node):
         if self.joint_state.position[1] > -self.max_positions[1]:
             self.joint_state.position[1] += self.increment*2
             print(self.joint_state.position[1])
-                # Ensure the joint does not exceed the maximum position
-                #self.joint_state.position[i] = max(self.joint_state.position[i], -self.max_positions[i])
 
-        # Check if all joints have reached their maximum positions
         if all(self.joint_state.position[i] <= -self.max_positions[i] for i in range(len(self.joint_state.position))):
             print(self.joint_state.position[0])
             self.get_logger().info('Arms have reached the top.')
-            self.moving_up = False  # Switch to shaking motion
+            self.moving_up = False 
 
     def shake_arms_top(self):
         print("going up")

@@ -53,10 +53,9 @@ class Joy(Node):
             if self.joint_state.position[i] > -self.max_positions[i]:
                 self.joint_state.position[i] += self.increment*2
                 print(self.joint_state.position[0])
-                # Ensure the joint does not exceed the maximum position
-                #self.joint_state.position[i] = max(self.joint_state.position[i], -self.max_positions[i])
 
-        # Check if all joints have reached their maximum positions
+
+
         if all(self.joint_state.position[i] <= -self.max_positions[i] for i in range(len(self.joint_state.position))):
             print(self.joint_state.position[0])
             self.get_logger().info('Arms have reached the top.')

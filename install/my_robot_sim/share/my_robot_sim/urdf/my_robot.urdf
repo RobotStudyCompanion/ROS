@@ -153,12 +153,10 @@
     </collision>
   </link>
   
-  <joint name="base_to_body" type="revolute">
+  <joint name="base_to_body" type="fixed">
      <parent link="base" />
      <child link="base_link" />
      <origin xyz="0 0 0" rpy="0 0 0" />
-     <axis xyz="0 0 1"/> 
-     <limit lower="-1.57" upper="1.57" effort="50" velocity="5.0"/>
 </joint>
 
   <link name="cornice">
@@ -182,7 +180,6 @@
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
 
-
   <link name="screen">
     <visual>
       <origin xyz="-0.377 -0.25 0.5295" rpy="1.39 0 0"/>
@@ -191,12 +188,15 @@
       </geometry>
       <material name="black"/>
     </visual>
-
-
+    <collision>
+      <geometry>
+        <mesh filename="package://my_robot_sim/meshes/screen.STL" scale="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
   </link>
   
   <joint name="screen_to_body" type="fixed">
-     <parent link="cornice" />
+     <parent link="base_link" />
      <child link="screen" />
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
@@ -207,7 +207,7 @@
       <geometry>
         <box size="0.4 0.58 0.001"/>
       </geometry>
-      <material name="caring"/>
+      <material name="pride"/>
     </visual>
   </link>
   
@@ -244,7 +244,7 @@
       <geometry>
         <mesh filename="package://my_robot_sim/meshes/button.STL" scale="0.01 0.01 0.01" />
       </geometry>
-      <material name="pink"/>
+      <material name="green"/>
     </visual>
     <collision>
       <geometry>
