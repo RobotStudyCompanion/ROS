@@ -70,6 +70,20 @@
   <texture filename="package://my_robot_sim/textures/fun.png"/>
 </material>
 
+  <link name="base">
+  <visual>
+    <origin xyz="-0.55 0.6 0.09" rpy="1.5708 0 0"/>
+    <geometry>
+      <mesh filename="package://my_robot_sim/meshes/base.STL" scale="0.01 0.01 0.01" />
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://my_robot_sim/meshes/base.STL" scale="0.01 0.01 0.01" />
+    </geometry>
+  </collision>
+</link>
   <!-- Base Link -->
   <link name="base_link">
     <visual>
@@ -85,7 +99,14 @@
       </geometry>
     </collision>
   </link>
-
+  
+  <joint name="base_to_body" type="revolute">
+      <parent link="base" />
+      <child link="base_link" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="0 0 1"/> 
+      <limit effort="100" velocity="1.0" lower="-1.57" upper="1.57"/>
+  </joint>
   <!-- Arm 1 Link -->
   <link name="arm_1">
     <visual>
@@ -138,26 +159,7 @@
     <axis xyz="1 0 0"/> <!-- Set rotation around x-axis -->
   </joint>
 
-  <link name="base">
-    <visual>
-      <origin xyz="-0.55 0.6 0.09" rpy="1.5708 0 0"/>
-      <geometry>
-        <mesh filename="package://my_robot_sim/meshes/base.STL" scale="0.01 0.01 0.01" />
-      </geometry>
-      <material name="blue"/>
-    </visual>
-    <collision>
-      <geometry>
-        <mesh filename="package://my_robot_sim/meshes/base.STL" scale="0.01 0.01 0.01" />
-      </geometry>
-    </collision>
-  </link>
-  
-  <joint name="base_to_body" type="fixed">
-     <parent link="base" />
-     <child link="base_link" />
-     <origin xyz="0 0 0" rpy="0 0 0" />
-</joint>
+
 
   <link name="cornice">
     <visual>
@@ -179,6 +181,7 @@
      <child link="cornice" />
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
+
 
   <link name="screen">
     <visual>
@@ -279,6 +282,10 @@
      <child link="back" />
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
+
+
+
+
 
 
 
