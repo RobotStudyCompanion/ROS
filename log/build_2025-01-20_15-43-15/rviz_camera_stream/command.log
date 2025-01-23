@@ -1,4 +1,0 @@
-Invoking command in '/home/miriam/my_workspace/build/rviz_camera_stream': /usr/bin/cmake --build /home/miriam/my_workspace/build/rviz_camera_stream -- -j16 -l16
-Invoked command in '/home/miriam/my_workspace/build/rviz_camera_stream' returned '0': /usr/bin/cmake --build /home/miriam/my_workspace/build/rviz_camera_stream -- -j16 -l16
-Invoking command in '/home/miriam/my_workspace/build/rviz_camera_stream': /usr/bin/cmake --install /home/miriam/my_workspace/build/rviz_camera_stream
-Invoked command in '/home/miriam/my_workspace/build/rviz_camera_stream' returned '0': /usr/bin/cmake --install /home/miriam/my_workspace/build/rviz_camera_stream

@@ -1,4 +1,0 @@
-Invoking command in '/home/miriam/my_workspace/build/my_robot_sim': CMAKE_PREFIX_PATH=/home/miriam/my_workspace/install:/opt/ros/humble /usr/bin/cmake --build /home/miriam/my_workspace/build/my_robot_sim -- -j16 -l16
-Invoked command in '/home/miriam/my_workspace/build/my_robot_sim' returned '0': CMAKE_PREFIX_PATH=/home/miriam/my_workspace/install:/opt/ros/humble /usr/bin/cmake --build /home/miriam/my_workspace/build/my_robot_sim -- -j16 -l16
-Invoking command in '/home/miriam/my_workspace/build/my_robot_sim': CMAKE_PREFIX_PATH=/home/miriam/my_workspace/install:/opt/ros/humble /usr/bin/cmake --install /home/miriam/my_workspace/build/my_robot_sim
-Invoked command in '/home/miriam/my_workspace/build/my_robot_sim' returned '0': CMAKE_PREFIX_PATH=/home/miriam/my_workspace/install:/opt/ros/humble /usr/bin/cmake --install /home/miriam/my_workspace/build/my_robot_sim

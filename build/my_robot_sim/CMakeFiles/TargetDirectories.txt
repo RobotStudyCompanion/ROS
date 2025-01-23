@@ -1,9 +1,0 @@
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/uninstall.dir
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/my_robot_sim_uninstall.dir
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/test.dir
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/edit_cache.dir
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/rebuild_cache.dir
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/list_install_components.dir
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/install.dir
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/install/local.dir
-/home/miriam/my_workspace/build/my_robot_sim/CMakeFiles/install/strip.dir

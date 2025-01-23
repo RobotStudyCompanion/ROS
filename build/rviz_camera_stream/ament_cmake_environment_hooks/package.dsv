@@ -1,4 +1,0 @@
-source;share/rviz_camera_stream/local_setup.bash
-source;share/rviz_camera_stream/local_setup.dsv
-source;share/rviz_camera_stream/local_setup.sh
-source;share/rviz_camera_stream/local_setup.zsh
