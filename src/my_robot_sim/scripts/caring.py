@@ -20,12 +20,12 @@ class Caring(Node):
         self.min_positions = [-0.5, 0.7]  # Lower positions for "shaking"
 
         # Define the increment for smooth movement
-        self.increment = -0.2
+        self.increment = -0.15
 
         # State variables
         self.shake_up = True
         self.shake_count = 0   # Count of shake cycles
-        self.max_shakes = 4    # Number of shakes to perform
+        self.max_shakes = 9    # Number of shakes to perform
 
     def control_motion(self):
         # Update the timestamp

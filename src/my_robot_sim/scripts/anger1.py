@@ -4,20 +4,20 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
 
-class Joy(Node):
+class Anger(Node):
     def __init__(self):
-        super().__init__('joy')
+        super().__init__('anger')
         self.publisher_ = self.create_publisher(JointState, 'joint_states', 10)
         self.timer = self.create_timer(0.1, self.control_motion)  # Publish at 10 Hz
         self.joint_state = JointState()
 
         # Initialize joint state names and default positions
-        self.joint_state.name = ['arm1_to_pivot', 'arm2_to_pivot']
-        self.joint_state.position = [0.0, 0.0]  # Default positions for all joints
+        self.joint_state.name = ['arm1_to_pivot', 'arm2_to_pivot',  'base_to_body']
+        self.joint_state.position = [0.0, 0.0, 0.0]  # Default positions for all joints
 
         # Define the top (maximum) positions for the joints
-        self.max_positions = [1.8, 1.6]  # Adjust these values based on your robot's limits
-        self.min_positions = [1.6, 1.8]  # Lower positions for "shaking"
+        self.max_positions = [3.0, 2.2, 0.2]  # Adjust these values based on your robot's limits
+        self.min_positions = [2.2, 3.0, -0.2]  # Lower positions for "shaking"
 
         # Define the increment for smooth movement
         self.increment = -0.2
@@ -26,7 +26,8 @@ class Joy(Node):
         self.moving_up = True  # True if moving towards the top position
         self.shake_up = False
         self.shake_count = 0   # Count of shake cycles
-        self.max_shakes = 35    # Number of shakes to perform
+        self.max_shakes = 4    # Number of shakes to perform
+        self.dir=1
 
     def control_motion(self):
         # Update the timestamp
@@ -35,12 +36,16 @@ class Joy(Node):
         if self.moving_up:
             # Perform shaking motion
             self.move_arms_to_top()
+            #self.shake_body()
         elif self.shake_up and self.shake_count<self.max_shakes:
             # Move arms to the top
             self.shake_arms_top()
+            self.shake_body()
+
         elif self.shake_count<self.max_shakes:
             print("here")
             self.shake_arms_down()
+            self.shake_body()
         else:
             self.get_logger().info('Motion complete.')
             self.timer.cancel()  # Stop the timer
@@ -48,23 +53,33 @@ class Joy(Node):
         # Publish the updated joint states
         self.publisher_.publish(self.joint_state)
 
+    def shake_body(self):
+        print("here")
+        if self.dir ==1:
+            self.joint_state.position[2]-=self.increment/2
+        else: 
+            self.joint_state.position[2]+=self.increment/2
+        if self.joint_state.position[2]>=self.max_positions[2] or self.joint_state.position[2]<=self.min_positions[2]:
+            self.dir = self.dir*-1
+
+
     def move_arms_to_top(self):
         """Gradually move arms to the top position."""
 
         if self.joint_state.position[0] > -self.max_positions[0]:
-            self.joint_state.position[0] += self.increment
+            self.joint_state.position[0] += self.increment*2
             print(self.joint_state.position[0])
         if self.joint_state.position[1] > -self.max_positions[1]:
-            self.joint_state.position[1] += self.increment
+            self.joint_state.position[1] += self.increment*2
             print(self.joint_state.position[1])
 
-
-        # Check if all joints have reached their maximum positions
-        if all(self.joint_state.position[i] <= -self.max_positions[i] for i in range(len(self.joint_state.position))):
+        if self.joint_state.position[0] <= -self.max_positions[0] and self.joint_state.position[1] <= -self.max_positions[1]: 
             print(self.joint_state.position[0])
             self.get_logger().info('Arms have reached the top.')
-            self.moving_up = False  # Switch to shaking motion
+            self.moving_up = False 
+
     def shake_arms_top(self):
+        #self.shake_body()
         print("going up")
         print(self.joint_state.position[0] , -self.max_positions[0])
         if self.joint_state.position[0] > -self.max_positions[0]:
@@ -79,6 +94,7 @@ class Joy(Node):
             print("->false")
      
     def shake_arms_down(self):
+        #self.shake_body()
         print("going down")
         print(self.joint_state.position[0] , self.min_positions[0])
         if self.joint_state.position[0] < -self.min_positions[0]:
@@ -90,16 +106,17 @@ class Joy(Node):
         if self.joint_state.position[0] >= -self.min_positions[0]:
             self.shake_up=True
 
+
 def main(args=None):
     rclpy.init(args=args)
-    caring_node = Joy()
+    joy_node = Anger()
     
     try:
-        rclpy.spin(caring_node)
+        rclpy.spin(joy_node)
     except KeyboardInterrupt:
         pass
 
-    caring_node.destroy_node()
+    joy_node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

@@ -100,13 +100,20 @@
     </collision>
   </link>
   
-  <joint name="base_to_body" type="revolute">
+  <!--<joint name="base_to_body" type="revolute">
       <parent link="base" />
       <child link="base_link" />
       <origin xyz="0 0 0" rpy="0 0 0" />
       <axis xyz="0 0 1"/> 
       <limit effort="100" velocity="1.0" lower="-1.57" upper="1.57"/>
+  </joint> -->
+
+  <joint name="base_to_body" type="fixed">
+     <parent link="base" />
+     <child link="base_link" />
+     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
+
   <!-- Arm 1 Link -->
   <link name="arm_1">
     <visual>
@@ -210,7 +217,7 @@
       <geometry>
         <box size="0.4 0.58 0.001"/>
       </geometry>
-      <material name="pride"/>
+      <material name="joy"/>
     </visual>
   </link>
   
@@ -247,7 +254,7 @@
       <geometry>
         <mesh filename="package://my_robot_sim/meshes/button.STL" scale="0.01 0.01 0.01" />
       </geometry>
-      <material name="green"/>
+      <material name="yellow"/>
     </visual>
     <collision>
       <geometry>
