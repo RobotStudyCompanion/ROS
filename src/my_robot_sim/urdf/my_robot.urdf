@@ -70,125 +70,114 @@
   <texture filename="package://my_robot_sim/textures/fun.png"/>
 </material>
 
-  <link name="base">
-  <visual>
-    <origin xyz="-0.55 0.6 0.09" rpy="1.5708 0 0"/>
-    <geometry>
-      <mesh filename="package://my_robot_sim/meshes/base.STL" scale="0.01 0.01 0.01" />
-    </geometry>
-    <material name="blue"/>
-  </visual>
-  <collision>
-    <geometry>
-      <mesh filename="package://my_robot_sim/meshes/base.STL" scale="0.01 0.01 0.01" />
-    </geometry>
-  </collision>
-</link>
-  <!-- Base Link -->
-  <link name="base_link">
+  <!-- Body -->
+  <link name="body">
     <visual>
       <origin xyz="-0.6 0.44 0.4" rpy="1.5708 0 0"/>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/body2.STL" scale="0.01 0.01 0.01" />
+        <mesh filename="package://my_robot_sim/meshes/body.STL" scale="0.01 0.01 0.01" />
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/body2.STL" scale="0.01 0.01 0.01" />
+        <mesh filename="package://my_robot_sim/meshes/body.STL" scale="0.01 0.01 0.01" />
       </geometry>
     </collision>
   </link>
-  
-  <!--<joint name="base_to_body" type="revolute">
-      <parent link="base" />
-      <child link="base_link" />
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <axis xyz="0 0 1"/> 
-      <limit effort="100" velocity="1.0" lower="-1.57" upper="1.57"/>
-  </joint> -->
 
-  <joint name="base_to_body" type="fixed">
-     <parent link="base" />
-     <child link="base_link" />
-     <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
 
-  <!-- Arm 1 Link -->
-  <link name="arm_1">
+  <!-- Arm right Link -->
+  <link name="flipper_r">
     <visual>
       <origin xyz="-0.55 -0.19 -0.55" rpy="-1.5708 3.14 0"/> <!-- Define the visual origin of arm_1 -->
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/rsc_flipperv8.STL" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://my_robot_sim/meshes/flipper.STL" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/rsc_flipperv8.STL" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://my_robot_sim/meshes/flipper.STL" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
 
   <!-- Joint for Arm 1 Rotation Around X-Axis Center -->
-  <joint name="arm1_to_pivot" type="continuous">
-    <parent link="base_link"/>
-    <child link="arm_1"/>
+  <joint name="flipper_r_to_body" type="continuous">
+    <parent link="body"/>
+    <child link="flipper_r"/>
     <origin xyz="0 0.05 0.9" rpy="0 0 0"/> <!-- Center the rotation around arm_1’s origin -->
     <axis xyz="1 0 0"/> <!-- Set rotation around x-axis -->
   </joint>
 
-
-
-
-
   <!-- Arm 2 Link -->
-  <link name="arm_2">
+  <link name="flipper_l">
     <visual>
     <origin xyz="+0.55 0.19 -0.55" rpy="1.5708 0 0"/>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/rsc_flipperv8.STL" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://my_robot_sim/meshes/flipper.STL" scale="0.01 0.01 0.01"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/rsc_flipperv8.STL" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://my_robot_sim/meshes/flipper.STL" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
   </link>
 
   <!-- Joint for Arm 1 Rotation Around X-Axis Center -->
-  <joint name="arm2_to_pivot" type="continuous">
-    <parent link="base_link"/>
-    <child link="arm_2"/>
+  <joint name="flipper_l_to_body" type="continuous">
+    <parent link="body"/>
+    <child link="flipper_l"/>
     <origin xyz="0 0.05 0.9" rpy="0 0 0"/> <!-- Center the rotation around arm_1’s origin -->
     <axis xyz="1 0 0"/> <!-- Set rotation around x-axis -->
   </joint>
 
 
 
-  <link name="cornice">
+  <link name="base">
     <visual>
-      <origin xyz="-0.458 -0.20 0.42" rpy="1.39 0 0"/>
+      <origin xyz="-0.55 0.6 0.09" rpy="1.5708 0 0"/>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/cornice.STL" scale="0.01 0.01 0.01" />
+        <mesh filename="package://my_robot_sim/meshes/base.STL" scale="0.01 0.01 0.01" />
       </geometry>
-      <material name="white"/>
+      <material name="blue"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/cornice.STL" scale="0.01 0.01 0.01" />
+        <mesh filename="package://my_robot_sim/meshes/base.STL" scale="0.01 0.01 0.01" />
       </geometry>
     </collision>
   </link>
   
-  <joint name="cornice_to_body" type="fixed">
-     <parent link="base_link" />
-     <child link="cornice" />
+  <joint name="base_to_body" type="fixed">
+     <parent link="base" />
+     <child link="body" />
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
 
+  <link name="frame">
+    <visual>
+      <origin xyz="-0.458 -0.20 0.42" rpy="1.39 0 0"/>
+      <geometry>
+        <mesh filename="package://my_robot_sim/meshes/frame.STL" scale="0.01 0.01 0.01" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://my_robot_sim/meshes/frame.STL" scale="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="frame_to_body" type="fixed">
+     <parent link="body" />
+     <child link="frame" />
+     <origin xyz="0 0 0" rpy="0 0 0" />
+</joint>
 
   <link name="screen">
     <visual>
@@ -206,7 +195,7 @@
   </link>
   
   <joint name="screen_to_body" type="fixed">
-     <parent link="base_link" />
+     <parent link="body" />
      <child link="screen" />
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
@@ -217,34 +206,34 @@
       <geometry>
         <box size="0.4 0.58 0.001"/>
       </geometry>
-      <material name="joy"/>
+      <material name="pride"/>
     </visual>
   </link>
   
   <joint name="image_to_body" type="fixed">
-     <parent link="base_link" />
+     <parent link="body" />
      <child link="image" />
      <origin xyz="0 0 0" rpy="-0.16 0 0" />
 </joint>
 
-  <link name="piattello">
+  <link name="lid">
     <visual>
       <origin xyz="-0.543 0.44 0.96" rpy="1.5708 0 0"/>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/piattello_button.STL" scale="0.01 0.01 0.01" />
+        <mesh filename="package://my_robot_sim/meshes/lid.STL" scale="0.01 0.01 0.01" />
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://my_robot_sim/meshes/piattello_button.STL" scale="0.01 0.01 0.01" />
+        <mesh filename="package://my_robot_sim/meshes/lid.STL" scale="0.01 0.01 0.01" />
       </geometry>
     </collision>
   </link>
   
-  <joint name="piattello_to_body" type="fixed">
-     <parent link="base_link" />
-     <child link="piattello" />
+  <joint name="lid_to_body" type="fixed">
+     <parent link="body" />
+     <child link="lid" />
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
 
@@ -254,7 +243,7 @@
       <geometry>
         <mesh filename="package://my_robot_sim/meshes/button.STL" scale="0.01 0.01 0.01" />
       </geometry>
-      <material name="yellow"/>
+      <material name="green"/>
     </visual>
     <collision>
       <geometry>
@@ -264,7 +253,7 @@
   </link>
   
   <joint name="button_to_body" type="fixed">
-     <parent link="base_link" />
+     <parent link="body" />
      <child link="button" />
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
@@ -285,14 +274,10 @@
   </link>
   
   <joint name="back_to_body" type="fixed">
-     <parent link="base_link" />
+     <parent link="body" />
      <child link="back" />
      <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
-
-
-
-
 
 
 
