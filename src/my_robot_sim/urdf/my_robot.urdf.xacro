@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="rsc" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
- <xacro:property name="button_color" value="yellow"/>
- <xacro:property name="face" value="joy"/>
+ <xacro:property name="button_color" value="yellow"/>   <!-- Modify here the color of the botton -->
+ <xacro:property name="face" value="joy"/>   <!-- Modify here the emotion face of the RSC -->
+ 
   <!-- Define materials -->
 <material name="blue">
   <color rgba="0 0 0.8 1"/>

@@ -21,12 +21,12 @@ Ensure you have the following installed:
 1. Clone the repository into your ROS 2 workspace:
    ```sh
    cd ~/ros2_ws/src
-   git clone https://github.com/yourusername/my_robot_sim.git
+   git clone https://github.com/yourusername/digital_twin.git
    ```
 2. Build the package:
    ```sh
    cd ~/ros2_ws
-   colcon build --packages-select my_robot_sim
+   colcon build --packages-select digital_twin
    ```
 3. Source the workspace:
    ```sh
@@ -34,7 +34,7 @@ Ensure you have the following installed:
    ```
 4. Launch the simulation:
    ```sh
-   ros2 launch my_robot_sim display_robot.launch.py
+   ros2 launch digital_twin display_robot.launch.py
    ```
 
 ## Usage
@@ -44,19 +44,19 @@ Ensure you have the following installed:
 To start the robot simulation in RViz2:
 
 ```sh
-ros2 launch my_robot_sim display_robot.launch.py
+ros2 launch digital_twin display_robot.launch.py
 ```
 
 ### Changing Colors and Faces
 
-Modify the robot’s appearance by adjusting parameters in the **config/** directory.
+Modify the robot’s appearance (the face emotion and the buttun color) by modifying lines 4 and 5 values in **src/digital_twin/urdf/my_robot.urdf.xacro/**.
 
 ### Controlling Flippers
 
 Run the following node to control the flippers:
 
 ```sh
-ros2 run my_robot_sim emotion.py
+ros2 run digital_twin emotion.py
 ```
 
 ## Contact
