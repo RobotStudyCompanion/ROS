@@ -2,9 +2,10 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 import os 
+from launch.substitutions import Command
 from launch_ros.actions import Node
 
-urdf_file = os.path.join(get_package_share_directory('my_robot_sim'), 'urdf', 'my_robot.urdf')
+robot_description = os.path.join(get_package_share_directory('my_robot_sim'), 'urdf/my_robot.urdf.xacro')
 
 def generate_launch_description():
     return LaunchDescription([
@@ -20,7 +21,7 @@ def generate_launch_description():
 	    executable='robot_state_publisher',
 	    name='robot_state_publisher',
 	    output='screen',
-	    parameters=[{'robot_description': open(urdf_file).read()}]
+	    parameters=[{'robot_description': Command(['xacro ', robot_description])}]
 	),
 	Node(
 		package='joint_state_publisher',
