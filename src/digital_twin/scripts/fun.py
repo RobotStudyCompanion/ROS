@@ -12,21 +12,20 @@ class Fun(Node):
         self.joint_state = JointState()
 
         # Initialize joint state names and default positions
-        self.joint_state.name = ['arm1_to_pivot', 'arm2_to_pivot']
-        self.joint_state.position = [0.0, 0.0]  # Default positions for all joints
+        self.joint_state.name = ['flipper_r_to_body', 'flipper_l_to_body']
+        self.joint_state.position = [0.0, 0.0] 
 
-        # Define the top (maximum) positions for the joints
-        self.max_positions = [3.0, 3.0]  # Adjust these values based on your robot's limits
+        # Define the max and min positions for the joints
+        self.max_positions = [3.0, 3.0] 
 
         # Define the increment for smooth movement
         self.increment = -0.5
 
-        # State variables
         self.shake_count = 0   # Count of shake cycles
         self.max_shakes = 200    # Number of shakes to perform
+        self.get_logger().info('Motion started.')
 
     def control_motion(self):
-        # Update the timestamp
         self.joint_state.header.stamp = self.get_clock().now().to_msg()
 
         if self.shake_count<self.max_shakes:
@@ -35,11 +34,9 @@ class Fun(Node):
             self.get_logger().info('Motion complete.')
             self.timer.cancel()  # Stop the timer
 
-        # Publish the updated joint states
         self.publisher_.publish(self.joint_state)
 
     def move_arms(self):
-        """Gradually move arms to the top position."""
         self.joint_state.position[0] += self.increment
         self.joint_state.position[1] -= self.increment
         self.shake_count+=1

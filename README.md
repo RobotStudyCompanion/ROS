@@ -49,14 +49,26 @@ ros2 launch digital_twin display_robot.launch.py
 
 ### Changing Colors and Faces
 
-Modify the robot’s appearance (the face emotion and the buttun color) by modifying lines 4 and 5 values in **src/digital_twin/urdf/my_robot.urdf.xacro/**.
+Modify the robot’s appearance (the face emotion and the buttun color) by modifying lines 4 and 5 values in **src/digital_twin/urdf/my_robot.urdf.xacro**.
 
 ### Controlling Flippers
 
-Run the following node to control the flippers:
+Run the following node to control the flippers with the different pre-set emotional movements:
 
 ```sh
 ros2 run digital_twin emotion.py
+```
+
+or the single emotions:
+
+```sh
+ros2 run digital_twin joy.py  --  fun.py  --  caring.py  --  joy.py  --  anger.py  --  surprise.py  --  neutral.py
+```
+
+Run the following node to directly control the flippers:
+
+```sh
+ros2 run joint_state_publisher_gui joint_state_publisher_gui
 ```
 
 ## Contact
