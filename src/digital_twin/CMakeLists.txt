@@ -32,17 +32,10 @@ install(
 
 # Install Python scripts
 install(
-  PROGRAMS scripts/arm_controller.py
+  DIRECTORY scripts/
   DESTINATION lib/${PROJECT_NAME}
 )
-install(
-  PROGRAMS scripts/video_publisher.py
-  DESTINATION lib/${PROJECT_NAME}
-)
-install(
-  PROGRAMS scripts/joy.py
-  DESTINATION lib/${PROJECT_NAME}
-)
+
 install(
   DIRECTORY panels/
   DESTINATION lib/${PROJECT_NAME}

@@ -32,15 +32,7 @@ install(
 
 # Install Python scripts
 install(
-  PROGRAMS scripts/arm_controller.py
-  DESTINATION lib/${PROJECT_NAME}
-)
-install(
-  PROGRAMS scripts/video_publisher.py
-  DESTINATION lib/${PROJECT_NAME}
-)
-install(
-  PROGRAMS scripts/joy.py
+  DIRECTORY scripts/
   DESTINATION lib/${PROJECT_NAME}
 )
 install(

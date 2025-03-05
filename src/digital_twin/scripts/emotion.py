@@ -384,12 +384,65 @@ class Neutral(Node):
             self.shake_up=True
     pass
 
+class Pride(Node):
+    def __init__(self):
+        super().__init__('pride')
+        self.publisher_ = self.create_publisher(JointState, 'joint_states', 10)
+        self.timer = self.create_timer(0.1, self.control_motion)  # Publish at 10 Hz
+        self.joint_state = JointState()
+
+        self.joint_state.name = ['flipper_r_to_body', 'flipper_l_to_body']
+        self.joint_state.position = [0.0, 0.0]  # Default positions for all joints
+
+        # Define the max and min positions for the joints
+        self.max_positions = [0.7, -0.5]  
+        self.min_positions = [-0.5, 0.7]  
+
+        # Define the increment for smooth movement
+        self.increment = -0.15
+
+        self.shake_up = True
+        self.shake_count = 0   # Count of shake cycles
+        self.max_shakes = 9    # Number of shakes to perform
+        self.get_logger().info('Motion started.')
+        
+    def control_motion(self):
+        self.joint_state.header.stamp = self.get_clock().now().to_msg()
+
+        if self.shake_up and self.shake_count<self.max_shakes:
+            self.shake_arms_top()
+        elif self.shake_count<self.max_shakes:
+            self.shake_arms_down()
+        else:
+            self.get_logger().info('Motion complete.')
+            self.timer.cancel()  # Stop the timer
+
+        self.publisher_.publish(self.joint_state)
+
+    def shake_arms_top(self):
+        if self.joint_state.position[0] > -self.max_positions[0]:
+            self.joint_state.position[0] += self.increment
+        if self.joint_state.position[1] < -self.max_positions[1]:
+            self.joint_state.position[1] -= self.increment
+        if self.joint_state.position[0] <= -self.max_positions[0]:
+            self.shake_up=False
+            self.shake_count+=1
+     
+    def shake_arms_down(self):
+        if self.joint_state.position[0] < -self.min_positions[0]:
+            self.joint_state.position[0] -= self.increment
+        if self.joint_state.position[1] > -self.min_positions[1]:
+            self.joint_state.position[1] += self.increment
+        if self.joint_state.position[0] >= -self.min_positions[0]:
+            self.shake_up=True
+    pass
+
 def main():
     nodes = {
         "1": Joy,
         "2": Fun,
         "3": Caring,
-        "4": Joy,  
+        "4": Pride,  
         "5": Anger,
         "6": Surprise,
         "7": Neutral
@@ -399,7 +452,7 @@ def main():
     print("1: Joy (Node 1)")
     print("2: Fun (Node 2)")
     print("3: Caring (Node 3)")
-    print("4: Joy (Node 4)")
+    print("4: Pride (Node 4)")
     print("5: Anger (Node 5)")
     print("6: Surprise (Node 6)")
     print("7: Neutral (Node 7)")

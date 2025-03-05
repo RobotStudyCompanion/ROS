@@ -1,4 +1,4 @@
-# My Robot Sim
+# Digital Twin
 
 ## Features
 
@@ -62,7 +62,7 @@ ros2 run digital_twin emotion.py
 or the single emotions:
 
 ```sh
-ros2 run digital_twin joy.py  --  fun.py  --  caring.py  --  joy.py  --  anger.py  --  surprise.py  --  neutral.py
+ros2 run digital_twin joy.py  --  fun.py  --  caring.py  --  pride.py  --  anger.py  --  surprise.py  --  neutral.py
 ```
 
 Run the following node to directly control the flippers:

@@ -60,14 +60,14 @@ class Caring(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    joy_node = Caring()
+    caring_node = Caring()
     
     try:
-        rclpy.spin(joy_node)
+        rclpy.spin(caring_node)
     except KeyboardInterrupt:
         pass
 
-    joy_node.destroy_node()
+    caring_node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
