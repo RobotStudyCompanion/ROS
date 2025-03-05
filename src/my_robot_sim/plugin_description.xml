@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<library path="panels/video_panel">
-    <class name="my_robot_sim/VideoPanel" type="VideoPanel" base_class_type="rviz2::Panel">
-        <description>Custom panel to display video in RViz2.</description>
-    </class>
-</library>

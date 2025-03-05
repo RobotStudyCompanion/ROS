@@ -70,6 +70,9 @@ Run the following node to directly control the flippers:
 ```sh
 ros2 run joint_state_publisher_gui joint_state_publisher_gui
 ```
+## DIGITAL TWIN TORSO
+
+There is a second package called **digital_twin_torso**, it has the same functionalities of digital_twin but it has another movement: the rotation of the torso.
 
 ## Contact
 
